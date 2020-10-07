@@ -4,22 +4,22 @@ import java.util.Scanner;
 
 public class JuegoDados extends Dado{
     Scanner sc = new Scanner(System.in);
-    Dado d1 = new Dado();
-    Dado d2 = new Dado();
-    Dado d3 = new Dado();
+    Dado d1, d2,d3;
     private int victorias = 0;
     private int derrotas = 0;
 
-    public JuegoDados(int dado1, int dado2, int dado3) {
-        this.d1.numeroDado = dado1;
-        this.d2.numeroDado = dado2;
-        this.d3.numeroDado = dado3;
+    public JuegoDados() {
+        this.d1 = new Dado();
+        this.d2= new Dado();
+        this.d3= new Dado();
     }
 
     public void jugar() {
         int opcionjuego=1;
         while (opcionjuego != 2) {
-            new JuegoDados(d1.tirar(),d2.tirar(),d3.tirar());
+            d1.setNumeroDado(tirar());
+            d2.setNumeroDado(tirar());
+            d3.setNumeroDado(tirar());
             System.out.printf("Dado1"+d1.toString()+" ");
             System.out.printf("Dado2"+d2.toString()+" ");
             System.out.printf("Dado3"+d3.toString()+"\n");
@@ -37,5 +37,7 @@ public class JuegoDados extends Dado{
         }
         System.out.printf("Has Ganado: %d veces \n", victorias);
         System.out.printf("Has perdido: %d veces \n", derrotas);
+        victorias=0;
+        derrotas=0;
     }
 }

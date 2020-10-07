@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Menu{
     Scanner sc = new Scanner(System.in);
     Dado dados = new Dado();
-    JuegoDados jd1 = new JuegoDados(dados.tirar(),dados.tirar(),dados.tirar());
+    JuegoDados jd1 = new JuegoDados();
     private int opcion=1;
     private int opcionMenu=1;
 
