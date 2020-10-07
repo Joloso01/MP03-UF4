@@ -2,8 +2,10 @@ package DadosE2;
 
 import java.util.Scanner;
 
-public class Menu extends JuegoDados{
+public class Menu{
     Scanner sc = new Scanner(System.in);
+    Dado dados = new Dado();
+    JuegoDados jd1 = new JuegoDados(dados.tirar(),dados.tirar(),dados.tirar());
     private int opcion=1;
     private int opcionMenu=1;
 
@@ -38,7 +40,7 @@ public class Menu extends JuegoDados{
             switch (opcionMenu){
                 case 1:
                     System.out.println("Bienvenido al juego de los dados");
-                    jugar();
+                    jd1.jugar();
                     System.out.println("Cerrando juego de los dados...");
                     break;
                 case 2:
