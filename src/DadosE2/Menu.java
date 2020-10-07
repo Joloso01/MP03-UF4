@@ -9,33 +9,15 @@ public class Menu{
     private int opcion=1;
     private int opcionMenu=1;
 
-    public void menuPrincipal(){
-        while (opcion != 0){
-            System.out.println("<---------->");
-            System.out.println("1. Juegos");
-            System.out.println("0. Salir");
-            System.out.println("<---------->");
-            opcion=sc.nextInt();
-            switch (opcion){
-                case 1:
-                    menuJuegos();
-                    break;
-                case 0:
-                    break;
-                default:
-                    System.out.println("Numero no valido");
-            }
-        }
-    }
-
     public void menuJuegos(){
         while (opcionMenu != 0){
-            System.out.println(" Juegos");
-            System.out.println("<------>");
+            System.out.println("    Juegos");
+            System.out.println("<------------->");
             System.out.println("1. Juego dados");
             System.out.println("2. Parchis");
             System.out.println("3. Tic Tac Toe");
             System.out.println("0. Salir");
+            System.out.println("<------------->");
             opcionMenu = sc.nextInt();
             switch (opcionMenu){
                 case 1:
