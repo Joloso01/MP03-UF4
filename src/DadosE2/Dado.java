@@ -17,8 +17,13 @@ public class Dado {
 
     @Override
     public String toString() {
-        return "Dado{" +
-                "numeroDado=" + numeroDado +
+        return "{" +
+                "numero=" + numeroDado +
                 '}';
+    }
+
+    public int tirar(){
+     numeroDado = (int)(Math.random()*6+1);
+     return numeroDado;
     }
 }
