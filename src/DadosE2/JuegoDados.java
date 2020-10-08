@@ -43,5 +43,6 @@ public class JuegoDados{
         System.out.printf("Has jugado: %d partidas \n", total);
         victorias=0;
         derrotas=0;
+        total=0;
     }
 }
