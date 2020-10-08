@@ -2,7 +2,7 @@ package DadosE2;
 
 import java.util.Scanner;
 
-public class JuegoDados extends Dado{
+public class JuegoDados{
     Scanner sc = new Scanner(System.in);
     Dado d1, d2,d3;
     private int victorias = 0;
@@ -18,9 +18,9 @@ public class JuegoDados extends Dado{
     public void jugar() {
         int opcionjuego=1;
         while (opcionjuego != 2) {
-            d1.setNumeroDado(tirar());
-            d2.setNumeroDado(tirar());
-            d3.setNumeroDado(tirar());
+            d1.setNumeroDado(d1.tirar());
+            d2.setNumeroDado(d2.tirar());
+            d3.setNumeroDado(d3.tirar());
             System.out.printf("Dado1"+d1.toString()+" ");
             System.out.printf("Dado2"+d2.toString()+" ");
             System.out.printf("Dado3"+d3.toString()+"\n");
