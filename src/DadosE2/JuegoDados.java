@@ -17,26 +17,44 @@ public class JuegoDados{
 
     public void jugar() {
         int opcionjuego=1;
+        boolean tirar=true;
         while (opcionjuego != 2) {
-            d1.setNumeroDado(d1.tirar());
-            d2.setNumeroDado(d2.tirar());
-            d3.setNumeroDado(d3.tirar());
-            System.out.printf("Dado1"+d1.toString()+" ");
-            System.out.printf("Dado2"+d2.toString()+" ");
-            System.out.printf("Dado3"+d3.toString()+"\n");
-            if (d1.getNumeroDado() == d2.getNumeroDado() && d2.getNumeroDado() == d3.getNumeroDado()) {
-                System.out.println("Has ganado!");
-                victorias++;
-                total++;
-            } else {
-                System.out.println("Has perdido");
-                derrotas++;
-                total++;
+            if (tirar){
+                d1.setNumeroDado(d1.tirar());
+                d2.setNumeroDado(d2.tirar());
+                d3.setNumeroDado(d3.tirar());
+                System.out.printf("Dado1"+d1.toString()+" ");
+                System.out.printf("Dado2"+d2.toString()+" ");
+                System.out.printf("Dado3"+d3.toString()+"\n");
+                if (d1.getNumeroDado() == d2.getNumeroDado() && d2.getNumeroDado() == d3.getNumeroDado()) {
+                    System.out.println("Has ganado!");
+                    victorias++;
+                    total++;
+                } else {
+                    System.out.println("Has perdido");
+                    derrotas++;
+                    total++;
+                }
+
             }
             System.out.println("Quieres jugar otra vez?");
             System.out.println("1. si");
             System.out.println("2. no");
             opcionjuego = sc.nextInt();
+            switch (opcionjuego){
+                case 1:
+                    tirar=true;
+                    break;
+                case 2:
+                    tirar=false;
+                    break;
+                default:
+                    tirar=false;
+                    System.out.println("Opcion no valida");
+
+                    break;
+            }
+
         }
         System.out.printf("Has Ganado: %d veces \n", victorias);
         System.out.printf("Has perdido: %d veces \n", derrotas);
