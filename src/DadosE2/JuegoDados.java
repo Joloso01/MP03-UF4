@@ -7,6 +7,7 @@ public class JuegoDados extends Dado{
     Dado d1, d2,d3;
     private int victorias = 0;
     private int derrotas = 0;
+    private int total=0;
 
     public JuegoDados() {
         this.d1 = new Dado();
@@ -26,9 +27,11 @@ public class JuegoDados extends Dado{
             if (d1.getNumeroDado() == d2.getNumeroDado() && d2.getNumeroDado() == d3.getNumeroDado()) {
                 System.out.println("Has ganado!");
                 victorias++;
+                total++;
             } else {
                 System.out.println("Has perdido");
                 derrotas++;
+                total++;
             }
             System.out.println("Quieres jugar otra vez?");
             System.out.println("1. si");
@@ -37,6 +40,7 @@ public class JuegoDados extends Dado{
         }
         System.out.printf("Has Ganado: %d veces \n", victorias);
         System.out.printf("Has perdido: %d veces \n", derrotas);
+        System.out.printf("Has jugado: %d partidas \n", total);
         victorias=0;
         derrotas=0;
     }
