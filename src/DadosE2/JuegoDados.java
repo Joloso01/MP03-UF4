@@ -35,7 +35,6 @@ public class JuegoDados{
                     derrotas++;
                     total++;
                 }
-
             }
             System.out.println("Quieres jugar otra vez?");
             System.out.println("1. si");
@@ -51,10 +50,8 @@ public class JuegoDados{
                 default:
                     tirar=false;
                     System.out.println("Opcion no valida");
-
                     break;
             }
-
         }
         System.out.printf("Has Ganado: %d veces \n", victorias);
         System.out.printf("Has perdido: %d veces \n", derrotas);
