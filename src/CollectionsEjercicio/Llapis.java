@@ -34,7 +34,11 @@ public class Llapis implements Comparable<Llapis>{
     }
 
     @Override
-    public int compareTo(Llapis llapis) {
-        return 0;
+    public int compareTo(Llapis o) {
+        if(this.color < o.getColor()) return 1;
+        else if (this.color > o.getColor()) return 1;
+        if(this.gruix < o.getGruix()) return -1;
+        else if (this.gruix > o.getGruix()) return -1;
+        else return 0;
     }
 }
