@@ -5,20 +5,26 @@ import java.util.*;
 public class Main{
     public static void main(String[] args) {
 
+        //2:
         Llapis llapis = new Llapis(0,0);
         List<Llapis> llapisList1 = new ArrayList<>();
         List<Llapis> llapisList2 = new ArrayList<>();
 
+        //3;
         for (int i = 0; i < 10; i++) {
             llapis=new Llapis((int)(Math.random()*7), 0);
             llapisList1.add(llapis);
         }
+
+        //4:
         System.out.println();
         for (int i = 0; i < 10; i++) {
             llapis=new Llapis((int)(Math.random()*7), (float) (Math.random()*3));
             llapisList2.add(llapis);
         }
         System.out.println();
+
+        //5:
         System.out.println("Print for llista1:");
         for (int i = 0; i < llapisList1.size(); i++) {
             System.out.println(llapisList1.get(i));
@@ -68,6 +74,9 @@ public class Main{
         llapisList2.forEach(System.out::println);
 
         System.out.println();
+
+
+        //6:
         System.out.println("Ordenado por Color: ");
         ComparatorLlapisColor cmlColor = new ComparatorLlapisColor();
         Collections.sort(llapisList1,cmlColor);
@@ -77,6 +86,7 @@ public class Main{
             System.out.println(l);
         }
 
+        //7:
         System.out.println("Ordenado por Gruix: ");
         ComparatorLlapisColorGruix cmlGruix =new ComparatorLlapisColorGruix();
         Collections.sort(llapisList2,cmlGruix);
@@ -85,16 +95,23 @@ public class Main{
         for (Llapis l1: llapisList2){
             System.out.println(l1);
         }
-
         System.out.println();
+
+        //8:
         System.out.println("Print LinkedList: ");
         LinkedList<Llapis> llapisLinkedList = new LinkedList<>(llapisList2);
+
+        //9:
         llapisLinkedList.addAll(llapisList1);
+
+        //10:
         for (Llapis lnk: llapisLinkedList){
             System.out.println(lnk);
         }
-
         System.out.println();
+
+
+        //11:
         System.out.println("Lista sin repetidos: ");
         Set<Llapis> llapisSet = new HashSet<>();
         llapisSet.addAll(llapisLinkedList);
@@ -103,6 +120,7 @@ public class Main{
         }
         System.out.println();
 
+        //12:
         Map<Integer,String> map_colors = new HashMap<>();
         map_colors.put(0,"Negre");
         map_colors.put(1,"Vermell");
