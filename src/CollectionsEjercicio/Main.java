@@ -88,8 +88,7 @@ public class Main{
 
         System.out.println();
         System.out.println("Print LinkedList: ");
-        LinkedList<Llapis> llapisLinkedList = new LinkedList<>();
-        llapisLinkedList.addAll(llapisList2);
+        LinkedList<Llapis> llapisLinkedList = new LinkedList<>(llapisList2);
         llapisLinkedList.addAll(llapisList1);
         for (Llapis lnk: llapisLinkedList){
             System.out.println(lnk);
@@ -102,6 +101,7 @@ public class Main{
         for (Llapis ls : llapisSet){
             System.out.println(ls);
         }
+        System.out.println();
 
         Map<Integer,String> map_colors = new HashMap<>();
         map_colors.put(0,"Negre");
@@ -110,6 +110,18 @@ public class Main{
         map_colors.put(3,"Verd");
         map_colors.put(4,"Verd");
         map_colors.put(3,"Blanc");
+
+        //I. que se sobre escribe por el blanco, porque tienen la misma clave.
+        //II.
+        for (Map.Entry<Integer,String> entry : map_colors.entrySet()){
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
+        System.out.println();
+        //III.
+        for (String m1 : map_colors.values()){
+            System.out.println(m1);
+        }
+
 
     }
 }
