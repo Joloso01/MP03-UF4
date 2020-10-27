@@ -16,7 +16,7 @@ public class dados{
             d2= ((int) (Math.random() * 6 +1));
             listaTiradas.add((d1)+(d2));
         }
-        for (int i=2;i<12;i++){
+        for (int i=2;i<13;i++){
             System.out.println(i+":"+Collections.frequency(listaTiradas,i));
         }
         System.out.println("Total:"+listaTiradas.size());
